@@ -1,0 +1,503 @@
+{
+  "contractName": "ExpiryHelper",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.14+commit.80d49f37\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/hts-precompile/ExpiryHelper.sol\":\"ExpiryHelper\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":1000},\"remappings\":[]},\"sources\":{\"project:/contracts/hts-precompile/ExpiryHelper.sol\":{\"keccak256\":\"0xec1234c514c202ee7728ae6362b09750c1ac67a77c0ac900d1f373548755963e\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://5c4e4a2451cfe0f4e2816bbd235c33a0e944087ed2c160ee0cdbb5ff940f90b9\",\"dweb:/ipfs/QmTgdMDT96Y5opyPyn3J1g9iwAyrrikwnjwRxiToxvS3Ws\"]},\"project:/contracts/hts-precompile/HederaResponseCodes.sol\":{\"keccak256\":\"0x0361e18efdf43d6b5ac136b6beaa4c943d7fe5e9b8515e5605e3a13b3e3a8177\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://d8bc2fcf2c308293f8ba791184080ab67406e973d2e3f1c70976a77f26a41752\",\"dweb:/ipfs/QmQrC4wQ1z7GiC79FLa2rbJDqDNCqkHVf3xLq2stFtpema\"]},\"project:/contracts/hts-precompile/HederaTokenService.sol\":{\"keccak256\":\"0x0dbf08877fc8b404977f9552ef94204516245f630c575b5917090f5995a42dbb\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://5c870ce964d5f97da69ef5ed0cdae3241072ec6474da2905fe3b2135db535a5b\",\"dweb:/ipfs/QmejnKjRj8MNR4TKSjGaWCyVo6YqJFY24NJgdB5FQNWRLp\"]},\"project:/contracts/hts-precompile/IHederaTokenService.sol\":{\"keccak256\":\"0xa5178e75748005ce194c89b0e67b36e04138a54f026fbb1499e25f3cbf0740a7\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://e0ae7681774a809961bec963f4fb6f89054e0eaa22719192eaa5522a00b6c56a\",\"dweb:/ipfs/QmNcm3aNFJf1JnKsxNjrU1L19mAjEJxoFaA9xB8oNcRMCd\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: Apache-2.0\npragma solidity >=0.5.0 <0.9.0;\npragma experimental ABIEncoderV2;\n\nimport \"./HederaTokenService.sol\";\n\nabstract contract ExpiryHelper {\n\n    function createAutoRenewExpiry(\n        address autoRenewAccount,\n        int64 autoRenewPeriod\n    ) internal pure returns (IHederaTokenService.Expiry memory expiry) {\n        expiry.autoRenewAccount = autoRenewAccount;\n        expiry.autoRenewPeriod = autoRenewPeriod;\n    }\n\n    function createSecondExpiry(int64 second) internal pure returns (IHederaTokenService.Expiry memory expiry) {\n        expiry.second = second;\n    }\n}",
+  "sourcePath": "C:\\Users\\anmol\\Downloads\\cross-border-money-txn\\cross-border-money-txn\\web\\contracts\\hts-precompile\\ExpiryHelper.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/hts-precompile/ExpiryHelper.sol",
+    "exportedSymbols": {
+      "ExpiryHelper": [
+        2582
+      ],
+      "HederaResponseCodes": [
+        3446
+      ],
+      "HederaTokenService": [
+        6067
+      ],
+      "IHederaTokenService": [
+        6834
+      ]
+    },
+    "id": 2583,
+    "license": "Apache-2.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2541,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "39:31:9"
+      },
+      {
+        "id": 2542,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "71:33:9"
+      },
+      {
+        "absolutePath": "project:/contracts/hts-precompile/HederaTokenService.sol",
+        "file": "./HederaTokenService.sol",
+        "id": 2543,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 2583,
+        "sourceUnit": 6068,
+        "src": "106:34:9",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [],
+        "canonicalName": "ExpiryHelper",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 2582,
+        "linearizedBaseContracts": [
+          2582
+        ],
+        "name": "ExpiryHelper",
+        "nameLocation": "160:12:9",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 2565,
+              "nodeType": "Block",
+              "src": "347:109:9",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 2557,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "expression": {
+                        "id": 2553,
+                        "name": "expiry",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2551,
+                        "src": "357:6:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Expiry_$6109_memory_ptr",
+                          "typeString": "struct IHederaTokenService.Expiry memory"
+                        }
+                      },
+                      "id": 2555,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "autoRenewAccount",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 6106,
+                      "src": "357:23:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 2556,
+                      "name": "autoRenewAccount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2545,
+                      "src": "383:16:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "357:42:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 2558,
+                  "nodeType": "ExpressionStatement",
+                  "src": "357:42:9"
+                },
+                {
+                  "expression": {
+                    "id": 2563,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "expression": {
+                        "id": 2559,
+                        "name": "expiry",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2551,
+                        "src": "409:6:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Expiry_$6109_memory_ptr",
+                          "typeString": "struct IHederaTokenService.Expiry memory"
+                        }
+                      },
+                      "id": 2561,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "autoRenewPeriod",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 6108,
+                      "src": "409:22:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int64",
+                        "typeString": "int64"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 2562,
+                      "name": "autoRenewPeriod",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2547,
+                      "src": "434:15:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int64",
+                        "typeString": "int64"
+                      }
+                    },
+                    "src": "409:40:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int64",
+                      "typeString": "int64"
+                    }
+                  },
+                  "id": 2564,
+                  "nodeType": "ExpressionStatement",
+                  "src": "409:40:9"
+                }
+              ]
+            },
+            "id": 2566,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createAutoRenewExpiry",
+            "nameLocation": "189:21:9",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2548,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2545,
+                  "mutability": "mutable",
+                  "name": "autoRenewAccount",
+                  "nameLocation": "228:16:9",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2566,
+                  "src": "220:24:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2544,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "220:7:9",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2547,
+                  "mutability": "mutable",
+                  "name": "autoRenewPeriod",
+                  "nameLocation": "260:15:9",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2566,
+                  "src": "254:21:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int64",
+                    "typeString": "int64"
+                  },
+                  "typeName": {
+                    "id": 2546,
+                    "name": "int64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "254:5:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int64",
+                      "typeString": "int64"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "210:71:9"
+            },
+            "returnParameters": {
+              "id": 2552,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2551,
+                  "mutability": "mutable",
+                  "name": "expiry",
+                  "nameLocation": "339:6:9",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2566,
+                  "src": "305:40:9",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Expiry_$6109_memory_ptr",
+                    "typeString": "struct IHederaTokenService.Expiry"
+                  },
+                  "typeName": {
+                    "id": 2550,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 2549,
+                      "name": "IHederaTokenService.Expiry",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 6109,
+                      "src": "305:26:9"
+                    },
+                    "referencedDeclaration": 6109,
+                    "src": "305:26:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Expiry_$6109_storage_ptr",
+                      "typeString": "struct IHederaTokenService.Expiry"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "304:42:9"
+            },
+            "scope": 2582,
+            "src": "180:276:9",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 2580,
+              "nodeType": "Block",
+              "src": "569:39:9",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 2578,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "expression": {
+                        "id": 2574,
+                        "name": "expiry",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2572,
+                        "src": "579:6:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Expiry_$6109_memory_ptr",
+                          "typeString": "struct IHederaTokenService.Expiry memory"
+                        }
+                      },
+                      "id": 2576,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "second",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 6104,
+                      "src": "579:13:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int64",
+                        "typeString": "int64"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 2577,
+                      "name": "second",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2568,
+                      "src": "595:6:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int64",
+                        "typeString": "int64"
+                      }
+                    },
+                    "src": "579:22:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int64",
+                      "typeString": "int64"
+                    }
+                  },
+                  "id": 2579,
+                  "nodeType": "ExpressionStatement",
+                  "src": "579:22:9"
+                }
+              ]
+            },
+            "id": 2581,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createSecondExpiry",
+            "nameLocation": "471:18:9",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2569,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2568,
+                  "mutability": "mutable",
+                  "name": "second",
+                  "nameLocation": "496:6:9",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2581,
+                  "src": "490:12:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int64",
+                    "typeString": "int64"
+                  },
+                  "typeName": {
+                    "id": 2567,
+                    "name": "int64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "490:5:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int64",
+                      "typeString": "int64"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "489:14:9"
+            },
+            "returnParameters": {
+              "id": 2573,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2572,
+                  "mutability": "mutable",
+                  "name": "expiry",
+                  "nameLocation": "561:6:9",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2581,
+                  "src": "527:40:9",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Expiry_$6109_memory_ptr",
+                    "typeString": "struct IHederaTokenService.Expiry"
+                  },
+                  "typeName": {
+                    "id": 2571,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 2570,
+                      "name": "IHederaTokenService.Expiry",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 6109,
+                      "src": "527:26:9"
+                    },
+                    "referencedDeclaration": 6109,
+                    "src": "527:26:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Expiry_$6109_storage_ptr",
+                      "typeString": "struct IHederaTokenService.Expiry"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "526:42:9"
+            },
+            "scope": 2582,
+            "src": "462:146:9",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 2583,
+        "src": "142:468:9",
+        "usedErrors": []
+      }
+    ],
+    "src": "39:571:9"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.14+commit.80d49f37.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2024-01-11T22:45:50.493Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

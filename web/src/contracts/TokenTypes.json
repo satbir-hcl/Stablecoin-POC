@@ -1,0 +1,165 @@
+{
+  "contractName": "TokenTypes",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.14+commit.80d49f37\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/TokenTypes.sol\":\"TokenTypes\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":1000},\"remappings\":[]},\"sources\":{\"project:/contracts/TokenTypes.sol\":{\"keccak256\":\"0xd9f3f0b7d031fb9c14baa34e15b6fcaa40b4ad9aa88bc379fabd27edfc34ee24\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://ae9f3c74ffc14f4ea47681922eafa28148259aa0e5aa371557c2cbbb96bd41ab\",\"dweb:/ipfs/QmSiHxbfpjHV3jeFJ9wxsKk6Aksh9K4kPVPpnpMDtrKjbq\"]}},\"version\":1}",
+  "bytecode": "0x60566037600b82828239805160001a607314602a57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220120a45881b9a13a49293fbbdccc45e4199cd219aa4e74a7b274f5f5d1815c4b564736f6c634300080e0033",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220120a45881b9a13a49293fbbdccc45e4199cd219aa4e74a7b274f5f5d1815c4b564736f6c634300080e0033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "72:145:8:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;72:145:8;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "72:145:8:-:0;;;;;;;;",
+  "source": "// SPDX-License-Identifier: Apache-2.0\npragma solidity >=0.4.9 <0.9.0;\n\nlibrary TokenTypes {\n    uint8 internal constant NATIVE_TOKEN = 0; // Native Token\n    uint8 internal constant ERC20_TOKEN = 1; // ERC 20 Token\n}\n",
+  "sourcePath": "C:\\Users\\anmol\\Downloads\\cross-border-money-txn\\cross-border-money-txn\\web\\contracts\\TokenTypes.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/TokenTypes.sol",
+    "exportedSymbols": {
+      "TokenTypes": [
+        2539
+      ]
+    },
+    "id": 2540,
+    "license": "Apache-2.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2532,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".9",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "39:31:8"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "TokenTypes",
+        "contractDependencies": [],
+        "contractKind": "library",
+        "fullyImplemented": true,
+        "id": 2539,
+        "linearizedBaseContracts": [
+          2539
+        ],
+        "name": "TokenTypes",
+        "nameLocation": "80:10:8",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "id": 2535,
+            "mutability": "constant",
+            "name": "NATIVE_TOKEN",
+            "nameLocation": "121:12:8",
+            "nodeType": "VariableDeclaration",
+            "scope": 2539,
+            "src": "97:40:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 2533,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "97:5:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "value": {
+              "hexValue": "30",
+              "id": 2534,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "136:1:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 2538,
+            "mutability": "constant",
+            "name": "ERC20_TOKEN",
+            "nameLocation": "183:11:8",
+            "nodeType": "VariableDeclaration",
+            "scope": 2539,
+            "src": "159:39:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 2536,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "159:5:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "value": {
+              "hexValue": "31",
+              "id": 2537,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "197:1:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_1_by_1",
+                "typeString": "int_const 1"
+              },
+              "value": "1"
+            },
+            "visibility": "internal"
+          }
+        ],
+        "scope": 2540,
+        "src": "72:145:8",
+        "usedErrors": []
+      }
+    ],
+    "src": "39:179:8"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.14+commit.80d49f37.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2024-01-11T22:45:50.492Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

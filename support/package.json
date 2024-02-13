@@ -1,0 +1,11 @@
+{
+  "name": "international-settlement",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@hashgraph/sdk": "^2.19.1",
+    "@openzeppelin/contracts": "^4.8.1",
+    "dotenv": "^16.0.3",
+    "ethers": "^5.7.2"
+  }
+}
